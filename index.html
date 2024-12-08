@@ -1,0 +1,165 @@
+
+<!--(!DOCTYPE html) Identifica la version de HTML 5-->
+<!DOCTYPE html>
+
+<!--(html) Se inicia el codigo HTML Y (lang="es")-->
+<html lang="es-ES">
+
+<!--(head) Se usa para definir metadatos y enlazar recursos 
+externos necesarios como hojas de estilo, scripts, y el título 
+de la página que aparece en la pestaña del navegador-->
+     <head>
+     <!--(title) se usa para establecer el título de la página que 
+     aparece en la pestaña del navegador-->   
+        <title>Full Sistemas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Mono&display=swap" rel="stylesheet">
+            
+        <link rel="stylesheet" href="css/style2.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+     </head>
+   
+   
+     <body>
+    <!--(body)  se usa para contener todo el contenido visible de una página web, 
+    como texto, imágenes, enlaces, formularios y más-->
+    <nav>
+
+       <ul>
+        <!--(ul) se usa para crear listas no ordenadas, 
+        con cada elemento de la lista definido por una etiqueta <li> -->
+
+            <li><a href="#clientes">Clientes</a></li>
+            <!-- (li) se usa dentro de listas para definir cada elemento de la lista.-->
+
+            <li><a href="#productos">Productos</a></li>
+                <!--la etigueta <li>, establece elementos en lista en la pagina-->
+                <!--la etiqueta <a>, define un enlace hacia otra página o una sección en la pagina-->
+                <!--el atributo (href), establece hipervinculo por URL o Sección en la página-->
+            <li><a href="#contactenos">Contáctenos</a></li>
+
+       </ul>
+    </nav>
+
+    
+    
+    <section id="empresa" class="clase empresac">
+        <div class="espacio"></div>
+        <article>
+         <div class="titulo">
+        <!--(div) ayuda a estructurar y organizar el contenido de la página de manera lógica y flexible.-->
+
+            <h1>FULL SISTEMAS PERU</h1>
+            <!--(h1)  se usa para definir el encabezado o título principal de una página o sección. Es el nivel más alto de encabezado-->
+            </div>
+
+            <div class="descripcion">
+            <p>es una innovadora empresa especializada en el desarrollo de soluciones tecnológicas para negocios y emprendedores. Nuestro objetivo es ayudar a las empresas a optimizar sus operaciones, mejorar su productividad y alcanzar sus objetivos mediante  el uso de tecnología de punta.</p>
+           
+        
+            <!--(p) se usa para definir un párrafo de texto -->    
+            </div>  
+        </article>
+        </section>
+
+
+
+        <section id="clientes" class="clase clientes-html bloque">
+        <!--(section) se usa para definir secciones temáticas en una página web, como capítulos, 
+        encabezados de temas o cualquier agrupamiento de contenido lógico.-->
+
+        <article>
+            <!--(article) se usa para definir contenido independiente y auto-contenido, como artículos
+             de noticias, entradas de blog, comentarios o cualquier otra pieza de contenido 
+             que pueda estar solo por sí misma-->
+                   <figure>
+                        <img src="IIMG/personas.png" width="200">
+                   </figure>
+
+                <DIV class="texto">
+                
+                    <h3>NUESTROS CLIENTES</h3>
+                    <ul>
+                        <Li>Comercial Ledesma SRL</Li>
+                        <Li>TECAVI</Li>
+                        <Li>Sparta Restobar</Li>
+                    </ul>
+                
+                 </DIV>
+                </article>
+        </section>
+
+
+
+        <section class="clase productos-html bloque">
+            
+            <article>
+             
+                <figure>
+                    <!--(figure) se usa para encapsular contenido gráfico, como imágenes,
+                     diagramas o ilustraciones, junto con su descripción.-->
+
+
+                   <IMG src="IIMG/LAPTOP.jpg" width="250"/>
+                   <!--(img) se usa para insertar imágenes en una página web -->
+
+                </figure>
+                    <!--la etiqueta <img>, define una imagen que se mostrará en la página-->
+                    <!--el atributo (src), especifica la ubicación de la imagen-->
+
+                <DIV class="texto">
+                    <H3>PRODUCTOS:</H3>
+                    <P>Laptop Gamer Asus Rog G533ZM-ES93 I9-12900H 16Gb 512Gb Ssd, Tarjeta de Video Rtx 3060 6Gb 15.6 Fhd 300Hz Windows 11</P>
+                    <a href="https://pcspeed.com.pe/producto/laptop-gamer-asus-rog-g533zm-es93-i9-12900h-16gb-512gb-ssd-t-video-rtx-3060-6gb-15-6-fhd-300hz-windows-11/">Mayor Información</a>
+                
+                   
+                </DIV>
+            </article>
+            </section>
+        
+
+       
+           
+        
+        <section id="Contactenos" class="contacto final">
+       
+             <!-- <H3>CONTÁCTENOS</H3>
+              <!--(h3) se usa para definir un subtítulo -->
+              <!--Movil: 958 928 753-->
+              <a href="mailto:geovictor47@gmail.com">geovictor47@gmail.com</a>
+              <!--(href) especifica la URL del destino del enlace. Es lo que convierte un texto o imagen 
+              en un enlace clicable, llevando al usuario a otra página o recurso.-->
+        </section>
+
+        <script>
+
+            
+          let mensajes={
+          m1: "Bienvenido a nuestro sitio web",
+          m2:"web en mantenimiento",
+          m3: "para soporte tecnico comunicarse a 9x"
+
+          };
+
+         window.alert(mensajes.m1);
+
+           let elementotitulo = document.querySelector('.titulo');
+           let elementosdfigure = document.querySelectorAll('figure');
+
+           elementosdfigure.forEach( function( element ) {
+           //console.log(emptyElement);
+           element.style.background = 'blue';
+        
+        });
+
+        elementotitulo.style.background = 'orange';
+
+        </script>
+
+
+
+    </body>
+
+</html>
