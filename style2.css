@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+
+
+}
+
+
+html, 
+body{
+    --border-radius: 100px;
+    --blue: #1cff73;
+    --pink:#ff00cc;
+    --green: #d61515;
+    --grey: #73d0ff;
+    --gutter: 3.125vw 6.25vW;
+
+    margin:  0;
+    padding: 0;
+    background: #000000;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: sans-serif;
+
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 1em;
+    margin: 0px;
+
+}
+
+h3 {
+    font-size: 60px;
+    margin: 0px;
+}
+
+a {
+    color:#ffffff ;
+    text-decoration:none; 
+}
+
+
+
+section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+    top: 100px;
+    z-index: 2;
+
+}
+
+section.bloque{
+    position: sticky;
+    margin-top: 100px;
+
+}
+
+section.final{
+    height: 100vh;
+    top: 0;
+    margin-top: 0;
+    z-index: 3;
+
+}
+
+
+/* navegacion */
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    z-index: 1;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li{
+    list-style: none;
+    margin-left: 40px;
+
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+
+}
+
+/* seccion empresa */
+section.empresac .espacio {
+    flex-basis: 37.5vw;
+    background: var(--grey);
+    border-radius: var(--border-radius);
+}
+
+section.empresac article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+section.empresac article .titulo {
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    background: var(--blue);
+    border-radius: var(--border-radius);
+    padding: var(--gutter);
+}
+section.empresac article .descripcion {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: var(--pink);
+    border-radius: var(--border-radius);
+    padding: var(--gutter);
+    color: #000000;
+}
+
+/*seccion cliente*/
+
+section.clase article{
+    display: flex;
+    width: 100%;
+}
+
+section.clase figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 56.25vw;
+    margin: 0;
+    background: var(--green);
+    border-radius: var(--border-radius);
+
+}
+
+section.clase figure img {
+    width: 40%;
+}
+
+section.clase .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background: #1f1a1c;
+    padding: var(--gutter);
+    border-radius: var(--border-radius);
+}
+
+section.clase .texto a{
+    font-family: "Outfit", sans-serif;
+}
+
+
+section.clase.clientes-html figure img {
+
+    animation-name: float;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77, .28, .42, .93);
+
+
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(5%);
+
+    }
+}
+
+section.clase.clientes-html figure {
+    background: var(--green);
+
+}
+section.clase.clientes-html .texto h3 {
+    color: var(--pink);
+
+}
+section.clase.productos-html figure {
+    background: var(--blue);
+}
+
+section.clase.productos-html .texto h3,
+section.clase.productos-html .texto a {
+    color: var(--green);
+
+}
+
+section.contacto {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--blue), var(--green)60%, var(--pink)70%,var(--grey));
+    border-radius: var(--border-radius);
+    mix-blend-mode: difference;
+
+}
+
+section.conracto a {
+    font-size: 100px;
+    color: #000000;
+    font-weight: bold;
+    transition: filter 2s cubic-bezier(.77, .28, .42, .93);
+    will-change: filter;
+}
+
+section.contacto a:hover {
+    filter: blur(20px);
+}
+
+@media only screen and (max-width: 768) {
+    html, body {
+        --border-radius: 50px;
+        --gutter: 6.25vW;
+
+    }
+
+    h1{
+        font-size: 60px;
+    }
+
+    nav ul li {
+        margin-left: 25px;
+        
+    }
+    section.clase article {
+        flex-direction: column;
+    }
+
+    section.clase figure {
+        flex-basis: 25vh;
+    }
+    section.clase figure img {
+        width: 20%;
+    }
+
+    section.contacto a {
+        font-size: 50px;
+        transform: rotate(90deg);
+    }
+}
+
